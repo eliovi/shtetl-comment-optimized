@@ -1,0 +1,18 @@
+// manifest.json
+{
+  "manifest_version": 2,
+  "name": "Shtetl Comment Optimized",
+  "version": "1.2",
+  "description": "Restructures comments on Scott Aaronson's blog to show replies as collapsible additions.",
+  "permissions": [
+    "https://scottaaronson.blog/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://scottaaronson.blog/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}

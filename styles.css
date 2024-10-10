@@ -1,0 +1,45 @@
+/* Reset list styles */
+.commentlist,
+.commentlist ol,
+.commentlist ul,
+.commentlist li {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.replies {
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 10px;
+  font-size: 12pt;
+}
+
+.toggle-replies {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Styling for quotes */
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 3px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+blockquote p {
+  margin: 0;
+}
