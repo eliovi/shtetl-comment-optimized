@@ -34,7 +34,7 @@
 
   function buildCommentTree(commentMap) {
     const rootComments = [];
-    const replyRegex = /^([^#]+)\s*#(\d+):\s*/;
+    const replyRegex = /^([^#]+)\s*#(\d+).*:\s*/;
 
     commentMap.forEach((comment) => {
       const contentElements = comment.element.querySelectorAll('p');
@@ -78,7 +78,7 @@ function renderCommentTree(comment, level = 0) {
 
     const toggleButton = document.createElement('button');
     toggleButton.className = 'toggle-replies';
-    toggleButton.textContent = `Show ${comment.replies.length} ${comment.replies.length === 1 ? 'Reply' : 'Replies'}`;
+    toggleButton.textContent = `Hide ${comment.replies.length} ${comment.replies.length === 1 ? 'Reply' : 'Replies'}`;
     commentElement.appendChild(toggleButton);
 
     comment.replies.forEach(reply => {
